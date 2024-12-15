@@ -1,0 +1,86 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: max-content;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: rgb(183, 177, 180, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(113, 111, 111, 0.871);
+}
+
+h2 {
+  word-break: keep-all;
+  text-align: center;
+  margin: 5%;
+  white-space: nowrap;
+}
+.controller {
+  flex-direction: row;
+  button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #1f68b5;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:active {
+    animation: bounce 0.3s ease-in-out;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 10px 2px #1f68b5;
+}
+
+.warning-message {
+  margin-top: 10px;
+  color: #ff0000;
+  font-weight: bold;
+  animation: slideIn 0.5s ease-out, blink 1.2s infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (min-width: 725px) {
+}
